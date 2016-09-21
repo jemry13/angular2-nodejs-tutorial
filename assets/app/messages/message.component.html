@@ -1,4 +1,4 @@
-<article class="panel panel-default" [ngStyle]="{'background-color': color}">
+<article class="panel panel-default">
   <div class="panel-body">
     {{message.content}}
   </div>
@@ -7,7 +7,7 @@
       {{message.username}}
     </div>
     <div class="config">
-      <a href="#" (click)="edit()" (editClicked)="message.content.$event">Edit</a>
+      <a href="#" (click)="edit()">Edit</a>
       <a href="#">Delete</a>
     </div>
   </footer>

@@ -10,10 +10,9 @@ import { Message } from "./message";
 
 export class MessageComponent{
   @Input('msg') message: Message;
-  @Output editClicked = new EventEmitter();
-  color='yellow';
+  @Output() editClicked = new EventEmitter();
 
   edit(){
-    this.editClicked.emit('Changed');
+    this.message.content='Changed';
   }
 }
