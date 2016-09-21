@@ -1,20 +1,14 @@
 import { Component } from '@angular/core';
-import { MessageComponent } from './messages/message.component'
-import { Message } from './messages/message'
+import { MessageListComponent } from './messages/message-list.component'
 
 @Component({
     moduleId: module.id,
     selector: 'my-app',
     template: `<div class="row">
-                  <section class="col-md-8 col-md-offset-2">
-                    <my-message *ngFor="let message of messages" [msg]="message"></my-message>
-                  </section>
+                  <my-message-list></my-message-list>
               </div>`,
-    directives:[MessageComponent]
+    directives:[MessageListComponent]
 })
 export class AppComponent {
-  messages: Message[] = [
-    new Message('Message 1',null,'Alejandro'),
-    new Message('Message 2',null,'Alejandro')
-  ];
+
 }
